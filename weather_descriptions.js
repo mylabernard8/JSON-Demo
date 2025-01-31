@@ -34,8 +34,10 @@ function draw() {
     let cy = map(weatherJSON.properties.periods[i].temperature, minTemp, maxTemp, 0.8 * height, 0.2 * height);
     line(px, py, cx, cy);
     fill(0);
-    text(weatherJSON.properties.periods[i].temperature + "°F", cx, cy - 10);
-    text(weatherJSON.properties.periods[i].shortForecast, cx, cy + 15);
+    text(weatherJSON.properties.periods[i].temperature + "°F", cx, cy - 15);
+    textAlign(CENTER);
+    text(weatherJSON.properties.periods[i].shortForecast, cx, cy + 25);
+    textAlign(LEFT);
     px = cx;
     py = cy;
   }
